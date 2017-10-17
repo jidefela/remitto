@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/partial_toolbar"/>
+
+        <include layout="@layout/partial_contact_header"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.l4digital.fastscroll.FastScrollRecyclerView
+            android:id="@+id/recycler_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bubbleColor="@color/colorPrimary"
+            app:bubbleTextColor="@color/white"
+            app:handleColor="@color/liver"
+            app:trackColor="@color/snow"
+            app:hideScrollbar="false"
+            app:showTrack="false"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:background="@color/white"/>
+
+        <co.carpware.remitto.view.IndexLayoutManager
+            android:id="@+id/index_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</LinearLayout>
